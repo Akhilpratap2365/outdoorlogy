@@ -45,7 +45,9 @@ function Hero() {
 
       <div className="container-page relative flex min-h-[100svh] flex-col justify-end pb-20 pt-40 text-[var(--banner-foreground)]">
         <div className="max-w-3xl">
-          
+          <div className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-3 py-1.5 text-xs font-medium uppercase tracking-[0.2em] backdrop-blur-md text-foreground">
+            <span className="h-1.5 w-1.5 rounded-full bg-accent" /> Crafting journeys since 2014
+          </div>
           <h1 className="mt-6 text-balance text-5xl font-bold leading-[0.98] sm:text-7xl md:text-[5.5rem]">
             Explore Beyond <em className="text-gradient-sunset not-italic">Boundaries</em> with Outdoorlogy
           </h1>
