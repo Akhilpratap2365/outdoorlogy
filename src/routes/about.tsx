@@ -60,8 +60,8 @@ function AboutPage() {
           <div className="mt-14 grid grid-cols-2 gap-8 md:grid-cols-4">
             {stats.map((s) => (
               <div key={s.label} className="text-center">
-                <div className="font-display text-5xl font-bold md:text-6xl">{s.value}</div>
-                <div className="mt-2 text-xs font-medium uppercase tracking-widest text-white/60">{s.label}</div>
+                <div className="font-display text-5xl font-bold text-forest-deep md:text-6xl">{s.value}</div>
+                <div className="mt-2 text-xs font-medium uppercase tracking-widest text-forest-deep">{s.label}</div>
               </div>
             ))}
           </div>

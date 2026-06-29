@@ -30,7 +30,7 @@ function GalleryPage() {
               <img src={img.src} alt={img.alt} loading="lazy" className="w-full object-cover transition-transform duration-[900ms] ease-out group-hover:scale-110" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
               <figcaption className="absolute inset-x-5 bottom-5 translate-y-3 text-white opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
-                <p className="text-xs uppercase tracking-widest text-white/70">Frame · {String(i + 1).padStart(2, "0")}</p>
+                <p className="text-xs uppercase tracking-widest text-gray-600">Frame · {String(i + 1).padStart(2, "0")}</p>
                 <p className="mt-1 font-display text-xl font-semibold">{img.alt}</p>
               </figcaption>
             </figure>

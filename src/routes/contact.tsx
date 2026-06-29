@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { Mail, Phone, MapPin, Send, Instagram, Youtube, Twitter, Facebook } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Clock } from "lucide-react";
 import { SectionHeading } from "@/components/section-heading";
 
 export const Route = createFileRoute("/contact")({
@@ -48,7 +48,7 @@ function ContactPage() {
           </div>
           <button
             type="submit"
-            className="mt-6 inline-flex items-center gap-2 rounded-full bg-[var(--gradient-sunset)] px-7 py-4 text-base font-semibold text-white shadow-[var(--shadow-glow)] transition-transform hover:-translate-y-0.5"
+            className="mt-6 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-orange-500 via-orange-400 to-amber-400 px-7 py-4 text-base font-semibold text-white shadow-[var(--shadow-glow)] transition-transform hover:-translate-y-0.5"
           >
             <Send className="h-4 w-4" /> Send the brief
           </button>
@@ -61,33 +61,53 @@ function ContactPage() {
 
         <aside className="space-y-6">
           <div className="rounded-3xl border border-border bg-card p-7 shadow-card">
-            <h3 className="font-display text-2xl font-bold">Reach us directly</h3>
-            <ul className="mt-5 space-y-4 text-sm">
-              <li className="flex items-start gap-3"><MapPin className="mt-0.5 h-4 w-4 text-forest" /> H-286 Tedhi Puliya, Lucknow</li>
-              <li className="flex items-center gap-3"><Phone className="h-4 w-4 text-forest" /> +91 91250 40027</li>
-              <li className="flex items-center gap-3"><Mail className="h-4 w-4 text-forest" /> tanishqojha75@gmail.com</li>
-            </ul>
-            <div className="mt-5 flex gap-3">
-              {[Instagram, Youtube, Twitter, Facebook].map((Icon, i) => (
-                <a key={i} href="#" aria-label="social" className="grid h-10 w-10 place-items-center rounded-full bg-secondary text-forest transition hover:bg-forest hover:text-white">
-                  <Icon className="h-4 w-4" />
-                </a>
-              ))}
+            <h3 className="font-display text-2xl font-bold">Location & hours</h3>
+            <p className="mt-3 text-sm leading-7 text-muted-foreground">
+              Reach our Lucknow office for travel planning, itinerary support and custom adventure advice.
+            </p>
+            <div className="mt-6 space-y-4 text-sm text-foreground">
+              <div className="flex items-start gap-3 rounded-3xl border border-gray-200 bg-[rgba(255,255,255,0.9)] p-4 shadow-sm">
+                <span className="grid h-11 w-11 place-items-center rounded-full bg-gradient-to-r from-orange-500 via-orange-400 to-amber-400 text-white">
+                  <MapPin className="h-5 w-5" />
+                </span>
+                <div>
+                  <div className="font-semibold">Address</div>
+                  <div>H-286 Tedhi Puliya, Lucknow</div>
+                </div>
+              </div>
+              <div className="flex items-start gap-3 rounded-3xl border border-gray-200 bg-[rgba(255,255,255,0.9)] p-4 shadow-sm">
+                <span className="grid h-11 w-11 place-items-center rounded-full bg-gradient-to-r from-orange-500 via-orange-400 to-amber-400 text-white">
+                  <Phone className="h-5 w-5" />
+                </span>
+                <div>
+                  <div className="font-semibold">Phone</div>
+                  <div>+91 91250 40027</div>
+                </div>
+              </div>
+              <div className="flex items-start gap-3 rounded-3xl border border-gray-200 bg-[rgba(255,255,255,0.9)] p-4 shadow-sm">
+                <span className="grid h-11 w-11 place-items-center rounded-full bg-gradient-to-r from-orange-500 via-orange-400 to-amber-400 text-white">
+                  <Mail className="h-5 w-5" />
+                </span>
+                <div>
+                  <div className="font-semibold">Email</div>
+                  <div>tanishqojha75@gmail.com</div>
+                </div>
+              </div>
+              <div className="flex items-start gap-3 rounded-3xl border border-gray-200 bg-[rgba(255,255,255,0.9)] p-4 shadow-sm">
+                <span className="grid h-11 w-11 place-items-center rounded-full bg-gradient-to-r from-orange-500 via-orange-400 to-amber-400 text-white">
+                  <Clock className="h-5 w-5" />
+                </span>
+                <div>
+                  <div className="font-semibold">Business hours</div>
+                  <div>Mon–Fri: 9am – 6pm</div>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div className="overflow-hidden rounded-3xl border border-border shadow-card">
-            <iframe
-              title="Outdoorlogy on the map"
-              src="https://www.openstreetmap.org/export/embed.html?bbox=78.25%2C30.05%2C78.40%2C30.15&amp;layer=mapnik&amp;marker=30.10%2C78.32"
-              className="h-72 w-full"
-              loading="lazy"
-            />
-          </div>
-
           <div className="relative overflow-hidden rounded-3xl bg-[var(--gradient-forest)] p-7 text-white">
-            <h3 className="font-display text-2xl font-bold">Join the newsletter</h3>
-            <p className="mt-2 text-sm text-white/75">One short, beautifully-written travel letter a month. No spam, ever.</p>
+            <h3 className="font-display text-2xl font-bold text-forest-deep">Join the newsletter</h3>
+            <p className="mt-2 text-sm text-forest-deep/80">One short, beautifully-written travel letter a month. No spam, ever.</p>
             <form className="mt-5 flex gap-2" onSubmit={(e) => e.preventDefault()}>
               <input type="email" required placeholder="your@email.com" className="flex-1 rounded-full bg-white/15 px-5 py-3 text-sm text-foreground placeholder:text-muted-foreground outline-none focus:bg-white/25" />
               <button className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-forest-deep">Subscribe</button>
