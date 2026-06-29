@@ -45,14 +45,13 @@ function Hero() {
 
       <div className="container-page relative flex min-h-[100svh] flex-col justify-end pb-20 pt-40 text-[var(--banner-foreground)]">
         <div className="max-w-3xl">
-          <div className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-3 py-1.5 text-xs font-medium uppercase tracking-[0.2em] backdrop-blur-md text-foreground">
-            <span className="h-1.5 w-1.5 rounded-full bg-accent" /> Crafting journeys since 2014
-          </div>
           <h1 className="mt-6 text-balance text-5xl font-bold leading-[0.98] sm:text-7xl md:text-[5.5rem]">
             Explore Beyond <em className="text-gradient-sunset not-italic">Boundaries</em> with Outdoorlogy
           </h1>
+
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/85">
-            Curated, thoughtfully designed travel for people who chase ridgelines, coral reefs and the quiet roads between. No templates. No tour-bus energy.
+            Curated, thoughtfully designed travel for people who chase ridgelines,
+            coral reefs and the quiet roads between. No templates. No tour-bus energy.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-4">
@@ -63,6 +62,7 @@ function Hero() {
               Explore Packages
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>
+
             <Link
               to="/blog"
               className="inline-flex items-center gap-2 rounded-full glass px-7 py-4 text-base font-semibold text-[var(--banner-foreground)] transition hover:bg-white/15"
@@ -80,14 +80,25 @@ function Hero() {
               style={{ animation: `float 6s ease-in-out ${i * 0.4}s infinite` }}
             >
               <div className="overflow-hidden rounded-2xl">
-                <img src={p.image} alt={p.title} width={1200} height={1500} loading="lazy" className="aspect-[4/3] w-full object-cover" />
+                <img
+                  src={p.image}
+                  alt={p.title}
+                  width={1200}
+                  height={1500}
+                  loading="lazy"
+                  className="aspect-[4/3] w-full object-cover"
+                />
               </div>
+
               <div className="flex items-center justify-between px-2 pb-1 pt-3 text-white">
                 <div>
                   <p className="text-sm font-semibold">{p.title}</p>
                   <p className="text-xs text-white/70">{p.region}</p>
                 </div>
-                <span className="rounded-full bg-white/15 px-3 py-1 text-xs font-semibold text-foreground">{p.duration}</span>
+
+                <span className="rounded-full bg-white/15 px-3 py-1 text-xs font-semibold text-foreground">
+                  {p.duration}
+                </span>
               </div>
             </div>
           ))}
@@ -96,6 +107,7 @@ function Hero() {
     </section>
   );
 }
+
 
 function StatsStrip() {
   return (
@@ -295,19 +307,15 @@ function CTABand() {
   return (
     <section className="container-page py-24">
       <div className="relative overflow-hidden rounded-[2.5rem] bg-[var(--gradient-forest)] p-10 md:p-16">
-        <div className="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-accent/40 blur-3xl" />
+        <div className="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-accent/30 blur-3xl" />
 
         <div className="relative grid items-center gap-8 md:grid-cols-[1fr_auto]">
           <div>
-            <h3
-              className="text-balance font-display text-3xl font-bold leading-tight md:text-5xl !text-black"
-            >
+            <h3 className="text-balance font-display text-3xl font-bold leading-tight md:text-5xl text-slate-50">
               Let's plan a trip you'll never want to come home from.
             </h3>
 
-            <p
-              className="mt-4 max-w-xl text-lg leading-relaxed !text-black"
-            >
+            <p className="mt-5 max-w-xl text-lg leading-relaxed text-slate-300">
               Tell us where you've been dreaming of, and we'll come back with a
               one-of-one itinerary in 48 hours.
             </p>
@@ -315,7 +323,7 @@ function CTABand() {
 
           <Link
             to="/contact"
-            className="inline-flex shrink-0 items-center gap-2 rounded-full bg-white px-7 py-4 text-base font-semibold text-forest-deep transition hover:bg-sand"
+            className="inline-flex shrink-0 items-center gap-2 rounded-full bg-white px-7 py-4 text-base font-semibold text-forest-deep shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-sand hover:shadow-xl"
           >
             Start planning
             <ArrowRight className="h-4 w-4" />
