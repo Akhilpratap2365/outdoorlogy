@@ -56,7 +56,7 @@ export function Navbar() {
         <div className="hidden lg:block">
           <Link
             to="/packages"
-            className="inline-flex items-center rounded-full bg-[var(--gradient-sunset)] px-5 py-2.5 text-sm font-semibold text-white shadow-[var(--shadow-glow)] transition-transform hover:-translate-y-0.5"
+            className="inline-flex items-center rounded-full bg-gradient-to-r from-orange-500 via-orange-400 to-amber-400 px-5 py-2.5 text-sm font-semibold text-white shadow-[var(--shadow-glow)] transition-transform hover:-translate-y-0.5"
           >
             Book a Trip
           </Link>

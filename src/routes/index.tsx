@@ -303,6 +303,7 @@ function HomeTestimonials() {
   );
 }
 
+
 function CTABand() {
   return (
     <section className="container-page py-24">
@@ -311,11 +312,11 @@ function CTABand() {
 
         <div className="relative grid items-center gap-8 md:grid-cols-[1fr_auto]">
           <div>
-            <h3 className="text-balance font-display text-3xl font-bold leading-tight md:text-5xl text-slate-50">
+            <h3 className="text-balance font-display text-3xl font-bold leading-tight md:text-5xl !text-black">
               Let's plan a trip you'll never want to come home from.
             </h3>
 
-            <p className="mt-5 max-w-xl text-lg leading-relaxed text-slate-300">
+            <p className="mt-5 max-w-xl text-lg leading-relaxed !text-black">
               Tell us where you've been dreaming of, and we'll come back with a
               one-of-one itinerary in 48 hours.
             </p>
@@ -323,7 +324,7 @@ function CTABand() {
 
           <Link
             to="/contact"
-            className="inline-flex shrink-0 items-center gap-2 rounded-full bg-white px-7 py-4 text-base font-semibold text-forest-deep shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-sand hover:shadow-xl"
+            className="inline-flex shrink-0 items-center gap-2 rounded-full bg-[var(--gradient-sunset)] px-7 py-4 text-base font-semibold text-black shadow-[var(--shadow-glow)] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
           >
             Start planning
             <ArrowRight className="h-4 w-4" />
